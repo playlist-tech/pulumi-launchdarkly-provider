@@ -10,10 +10,8 @@ from setuptools.command.install import install
 from subprocess import check_call
 
 
-VERSION = "0.0.0"
-PLUGIN_VERSION = VERSION
-VERSION = os.getenv("VERSION", VERSION)
-PLUGIN_VERSION = os.getenv("PLUGIN_VERSION", PLUGIN_VERSION)
+VERSION = os.getenv("VERSION", "0.0.0")
+PLUGIN_VERSION = os.getenv("PLUGIN_VERSION", VERSION)
 def readme():
     try:
         with open('README.md', encoding='utf-8') as f:
