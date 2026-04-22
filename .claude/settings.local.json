@@ -58,7 +58,10 @@
       "Bash(./bin/pulumi-resource-launchdarkly -version)",
       "Bash(rm -rf sdk/dotnet/*.cs sdk/dotnet/Pulumi*)",
       "Bash(./bin/pulumi-tfgen-launchdarkly dotnet *)",
-      "Bash(git checkout *)"
+      "Bash(git checkout *)",
+      "Bash(wsl --list --verbose)",
+      "Bash(wsl bash *)",
+      "Bash(wsl *)"
     ]
   }
 }

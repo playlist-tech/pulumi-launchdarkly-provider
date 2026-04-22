@@ -4,7 +4,6 @@ go 1.25.8
 
 require (
 	github.com/blang/semver v3.5.1+incompatible
-	github.com/pkg/errors v0.9.1
 	github.com/pulumi/pulumi/sdk/v3 v3.228.0
 )
 
@@ -72,6 +71,7 @@ require (
 	github.com/pgavlin/fx v0.1.6 // indirect
 	github.com/pgavlin/fx/v2 v2.0.10 // indirect
 	github.com/pjbgf/sha1cd v0.3.2 // indirect
+	github.com/pkg/errors v0.9.1 // indirect
 	github.com/pkg/term v1.1.0 // indirect
 	github.com/pmezard/go-difflib v1.0.1-0.20181226105442-5d4384ee4fb2 // indirect
 	github.com/pulumi/appdash v0.0.0-20231130102222-75f619a67231 // indirect
