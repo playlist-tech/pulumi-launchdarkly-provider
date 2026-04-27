@@ -1,0 +1,51 @@
+{
+    "mux": {
+        "resources": {
+            "launchdarkly:index/accessToken:AccessToken": 0,
+            "launchdarkly:index/aiConfig:AiConfig": 0,
+            "launchdarkly:index/aiConfigVariation:AiConfigVariation": 0,
+            "launchdarkly:index/aiTool:AiTool": 0,
+            "launchdarkly:index/auditLogSubscription:AuditLogSubscription": 0,
+            "launchdarkly:index/customRole:CustomRole": 0,
+            "launchdarkly:index/destination:Destination": 0,
+            "launchdarkly:index/environment:Environment": 0,
+            "launchdarkly:index/featureFlag:FeatureFlag": 0,
+            "launchdarkly:index/featureFlagEnvironment:FeatureFlagEnvironment": 0,
+            "launchdarkly:index/flagTemplates:FlagTemplates": 0,
+            "launchdarkly:index/flagTrigger:FlagTrigger": 0,
+            "launchdarkly:index/metric:Metric": 0,
+            "launchdarkly:index/modelConfig:ModelConfig": 0,
+            "launchdarkly:index/project:Project": 0,
+            "launchdarkly:index/relayProxyConfiguration:RelayProxyConfiguration": 0,
+            "launchdarkly:index/segment:Segment": 0,
+            "launchdarkly:index/team:Team": 0,
+            "launchdarkly:index/teamMember:TeamMember": 0,
+            "launchdarkly:index/teamRoleMapping:TeamRoleMapping": 1,
+            "launchdarkly:index/view:View": 0,
+            "launchdarkly:index/viewFilterLinks:ViewFilterLinks": 0,
+            "launchdarkly:index/viewLinks:ViewLinks": 0,
+            "launchdarkly:index/webhook:Webhook": 0
+        },
+        "functions": {
+            "launchdarkly:index/getAiConfig:getAiConfig": 0,
+            "launchdarkly:index/getAiConfigVariation:getAiConfigVariation": 0,
+            "launchdarkly:index/getAiTool:getAiTool": 0,
+            "launchdarkly:index/getAuditLogSubscription:getAuditLogSubscription": 0,
+            "launchdarkly:index/getEnvironment:getEnvironment": 0,
+            "launchdarkly:index/getFeatureFlag:getFeatureFlag": 0,
+            "launchdarkly:index/getFeatureFlagEnvironment:getFeatureFlagEnvironment": 0,
+            "launchdarkly:index/getFlagTemplates:getFlagTemplates": 0,
+            "launchdarkly:index/getFlagTrigger:getFlagTrigger": 0,
+            "launchdarkly:index/getMetric:getMetric": 0,
+            "launchdarkly:index/getModelConfig:getModelConfig": 0,
+            "launchdarkly:index/getProject:getProject": 0,
+            "launchdarkly:index/getRelayProxyConfiguration:getRelayProxyConfiguration": 0,
+            "launchdarkly:index/getSegment:getSegment": 0,
+            "launchdarkly:index/getTeam:getTeam": 0,
+            "launchdarkly:index/getTeamMember:getTeamMember": 0,
+            "launchdarkly:index/getTeamMembers:getTeamMembers": 0,
+            "launchdarkly:index/getView:getView": 0,
+            "launchdarkly:index/getWebhook:getWebhook": 0
+        }
+    }
+}
