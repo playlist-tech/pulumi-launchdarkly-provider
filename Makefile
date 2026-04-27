@@ -49,6 +49,7 @@ build_python:: install_plugins tfgen # build the python sdk
 	$(WORKING_DIR)/bin/$(TFGEN) python --overlays provider/overlays/python --out sdk/python/
 	cd sdk/python/ && \
         cp ../../README.md . && \
+        python3 -m pip install --upgrade pip setuptools wheel && \
         python3 setup.py clean --all || true && \
         rm -rf ./bin/ ../python.bin/ && cp -R . ../python.bin && mv ../python.bin ./bin && \
         cp ../../LICENSE ./bin/ || true && \
