@@ -49,7 +49,7 @@ build_python:: install_plugins tfgen # build the python sdk
 	$(WORKING_DIR)/bin/$(TFGEN) python --overlays provider/overlays/python --out sdk/python/
 	cd sdk/python/ && \
         cp ../../README.md . && \
-        python3 setup.py clean --all 2>/dev/null && \
+        (python3 setup.py clean --all 2>/dev/null || true) && \
         rm -rf ./bin/ ../python.bin/ && cp -R . ../python.bin && mv ../python.bin ./bin && \
         cd ./bin && VERSION="$(PYPI_VERSION)" PLUGIN_VERSION="$(VERSION)" python3 setup.py build sdist
 
