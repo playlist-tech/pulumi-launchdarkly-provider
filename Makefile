@@ -49,11 +49,16 @@ build_python:: install_plugins tfgen # build the python sdk
 	$(WORKING_DIR)/bin/$(TFGEN) python --overlays provider/overlays/python --out sdk/python/
 	cd sdk/python/ && \
         cp ../../README.md . && \
-        python3 setup.py clean --all 2>/dev/null && \
+        python3 setup.py clean --all || true && \
         rm -rf ./bin/ ../python.bin/ && cp -R . ../python.bin && mv ../python.bin ./bin && \
+        cp ../../LICENSE ./bin/ || true && \
         sed -i.bak -e 's/^VERSION = .*/VERSION = "$(PYPI_VERSION)"/g' -e 's/^PLUGIN_VERSION = .*/PLUGIN_VERSION = "$(VERSION)"/g' ./bin/setup.py && \
         rm ./bin/setup.py.bak && \
-        cd ./bin && python3 setup.py build sdist
+        cd ./bin && \
+        python3 -VV && \
+        python3 -m pip --version && \
+        echo "Building python sdist: VERSION=$(PYPI_VERSION) PLUGIN_VERSION=$(VERSION)" && \
+        python3 -u setup.py -v sdist
 
 build_go:: install_plugins tfgen # build the go sdk
 	$(WORKING_DIR)/bin/$(TFGEN) go --overlays provider/overlays/go --out sdk/go/
