@@ -2,12 +2,12 @@
 
   <PropertyGroup>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Authors>lbrlabs</Authors>
-    <Company>lbrlabs</Company>
+    <Authors>playlist-tech</Authors>
+    <Company>playlist-tech</Company>
     <Description>A Pulumi package for creating and managing launch darkly cloud resources.</Description>
     <PackageLicenseExpression></PackageLicenseExpression>
     <PackageProjectUrl>https://www.pulumi.com</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/lbrlabs/pulumi-launchdarkly</RepositoryUrl>
+    <RepositoryUrl>https://github.com/playlist-tech/pulumi-launchdarkly</RepositoryUrl>
     <PackageIcon>logo.png</PackageIcon>
 
     <TargetFramework>net6.0</TargetFramework>

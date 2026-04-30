@@ -20,20 +20,20 @@ def readme():
         return "launchdarkly Pulumi Package - Development Version"
 
 
-setup(name='lbrlabs_pulumi_launchdarkly',
+setup(name='playlist_pulumi_launchdarkly',
       python_requires='>=3.9',
       version=VERSION,
       description="A Pulumi package for creating and managing launch darkly cloud resources.",
       long_description=readme(),
       long_description_content_type='text/markdown',
-      keywords='pulumi launchdarkly lbrlabs',
+      keywords='pulumi launchdarkly playlist-tech',
       url='https://www.pulumi.com',
       project_urls={
-          'Repository': 'https://github.com/lbrlabs/pulumi-launchdarkly'
+          'Repository': 'https://github.com/playlist-tech/pulumi-launchdarkly'
       },
       packages=find_packages(),
       package_data={
-          'lbrlabs_pulumi_launchdarkly': [
+          'playlist_pulumi_launchdarkly': [
               'py.typed',
               'pulumi-plugin.json',
           ]

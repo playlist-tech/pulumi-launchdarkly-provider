@@ -53,7 +53,7 @@ namespace Lbrlabs.PulumiPackage.Launchdarkly
         {
             var dst = src ?? new global::Pulumi.InvokeOptions{};
             dst.Version = src?.Version ?? Version;
-            dst.PluginDownloadURL = src?.PluginDownloadURL ?? "github://api.github.com/lbrlabs";
+            dst.PluginDownloadURL = src?.PluginDownloadURL ?? "github://api.github.com/playlist-tech";
             return dst;
         }
 
@@ -61,7 +61,7 @@ namespace Lbrlabs.PulumiPackage.Launchdarkly
         {
             var dst = src ?? new global::Pulumi.InvokeOutputOptions{};
             dst.Version = src?.Version ?? Version;
-            dst.PluginDownloadURL = src?.PluginDownloadURL ?? "github://api.github.com/lbrlabs";
+            dst.PluginDownloadURL = src?.PluginDownloadURL ?? "github://api.github.com/playlist-tech";
             return dst;
         }
 

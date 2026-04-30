@@ -1,5 +1,0 @@
-{
-  "resource": true,
-  "name": "launchdarkly",
-  "server": "github://api.github.com/lbrlabs"
-}

@@ -8,7 +8,7 @@ import (
 	"unicode"
 
 	"github.com/launchdarkly/terraform-provider-launchdarkly/launchdarkly"
-	"github.com/lbrlabs/pulumi-launchdarkly/provider/pkg/version"
+	"github.com/playlist-tech/pulumi-launchdarkly/provider/pkg/version"
 	"github.com/pulumi/pulumi-terraform-bridge/v3/pkg/tfbridge"
 	shim "github.com/pulumi/pulumi-terraform-bridge/v3/pkg/tfshim"
 	shimv2 "github.com/pulumi/pulumi-terraform-bridge/v3/pkg/tfshim/sdk-v2"
@@ -58,13 +58,13 @@ func Provider() tfbridge.ProviderInfo {
 		Name:              "launchdarkly",
 		Version:           version.Version,
 		DisplayName:       "Launch Darkly",
-		Publisher:         "lbrlabs",
-		LogoURL:           "https://raw.githubusercontent.com/lbrlabs/pulumi-launchdarkly/master/assets/logo.png",
-		PluginDownloadURL: "github://api.github.com/lbrlabs",
+		Publisher:         "playlist-tech",
+		LogoURL:           "https://raw.githubusercontent.com/playlist-tech/pulumi-launchdarkly/master/assets/logo.png",
+		PluginDownloadURL: "github://api.github.com/playlist-tech",
 		Description:       "A Pulumi package for creating and managing launch darkly cloud resources.",
-		Keywords:          []string{"pulumi", "launchdarkly", "lbrlabs"},
+		Keywords:          []string{"pulumi", "launchdarkly", "playlist-tech"},
 		Homepage:          "https://www.pulumi.com",
-		Repository:        "https://github.com/lbrlabs/pulumi-launchdarkly",
+		Repository:        "https://github.com/playlist-tech/pulumi-launchdarkly",
 		GitHubOrg:         "launchdarkly",
 		MetadataInfo:      tfbridge.NewProviderMetadata(metadata),
 		Config: map[string]*tfbridge.SchemaInfo{
@@ -139,17 +139,17 @@ func Provider() tfbridge.ProviderInfo {
 				"@types/node": "^10.0.0",
 				"@types/mime": "^2.0.0",
 			},
-			PackageName: "@lbrlabs/pulumi-launchdarkly",
+			PackageName: "@playlist-tech/pulumi-launchdarkly",
 		},
 		Python: &tfbridge.PythonInfo{
 			Requires: map[string]string{
 				"pulumi": ">=3.0.0,<4.0.0",
 			},
-			PackageName: "lbrlabs_pulumi_launchdarkly",
+			PackageName: "playlist_pulumi_launchdarkly",
 		},
 		Golang: &tfbridge.GolangInfo{
 			ImportBasePath: path.Join(
-				fmt.Sprintf("github.com/lbrlabs/pulumi-%[1]s/sdk/", mainPkg),
+				fmt.Sprintf("github.com/playlist-tech/pulumi-%[1]s/sdk/", mainPkg),
 				tfbridge.GetModuleMajorVersion(version.Version),
 				"go",
 				mainPkg,
