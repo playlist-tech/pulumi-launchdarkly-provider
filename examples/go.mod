@@ -1,4 +1,4 @@
-module github.com/lbrlabs/pulumi-launchdarkly/examples
+module github.com/playlist-tech/pulumi-launchdarkly/examples
 
 go 1.25.8
 

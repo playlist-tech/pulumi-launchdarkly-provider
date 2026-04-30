@@ -7,7 +7,7 @@ updates:
     time: "13:00"
   open-pull-requests-limit: 3
   reviewers:
-  - jaxxstorm
+  - @playlist-tech/squad-dev-experience
   labels:
   - dependencies
   - dependabot
@@ -18,7 +18,7 @@ updates:
     time: "13:00"
   open-pull-requests-limit: 3
   reviewers:
-  - jaxxstorm
+  - @playlist-tech/squad-dev-experience
   labels:
   - dependencies
   - dependabot

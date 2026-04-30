@@ -55,10 +55,10 @@ from . import outputs
 
 # Make subpackages available:
 if typing.TYPE_CHECKING:
-    import lbrlabs_pulumi_launchdarkly.config as __config
+    import playlist_pulumi_launchdarkly.config as __config
     config = __config
 else:
-    config = _utilities.lazy_import('lbrlabs_pulumi_launchdarkly.config')
+    config = _utilities.lazy_import('playlist_pulumi_launchdarkly.config')
 
 _utilities.register(
     resource_modules="""
@@ -66,7 +66,7 @@ _utilities.register(
  {
   "pkg": "launchdarkly",
   "mod": "index/accessToken",
-  "fqn": "lbrlabs_pulumi_launchdarkly",
+  "fqn": "playlist_pulumi_launchdarkly",
   "classes": {
    "launchdarkly:index/accessToken:AccessToken": "AccessToken"
   }
@@ -74,7 +74,7 @@ _utilities.register(
  {
   "pkg": "launchdarkly",
   "mod": "index/aiConfig",
-  "fqn": "lbrlabs_pulumi_launchdarkly",
+  "fqn": "playlist_pulumi_launchdarkly",
   "classes": {
    "launchdarkly:index/aiConfig:AiConfig": "AiConfig"
   }
@@ -82,7 +82,7 @@ _utilities.register(
  {
   "pkg": "launchdarkly",
   "mod": "index/aiConfigVariation",
-  "fqn": "lbrlabs_pulumi_launchdarkly",
+  "fqn": "playlist_pulumi_launchdarkly",
   "classes": {
    "launchdarkly:index/aiConfigVariation:AiConfigVariation": "AiConfigVariation"
   }
@@ -90,7 +90,7 @@ _utilities.register(
  {
   "pkg": "launchdarkly",
   "mod": "index/aiTool",
-  "fqn": "lbrlabs_pulumi_launchdarkly",
+  "fqn": "playlist_pulumi_launchdarkly",
   "classes": {
    "launchdarkly:index/aiTool:AiTool": "AiTool"
   }
@@ -98,7 +98,7 @@ _utilities.register(
  {
   "pkg": "launchdarkly",
   "mod": "index/auditLogSubscription",
-  "fqn": "lbrlabs_pulumi_launchdarkly",
+  "fqn": "playlist_pulumi_launchdarkly",
   "classes": {
    "launchdarkly:index/auditLogSubscription:AuditLogSubscription": "AuditLogSubscription"
   }
@@ -106,7 +106,7 @@ _utilities.register(
  {
   "pkg": "launchdarkly",
   "mod": "index/customRole",
-  "fqn": "lbrlabs_pulumi_launchdarkly",
+  "fqn": "playlist_pulumi_launchdarkly",
   "classes": {
    "launchdarkly:index/customRole:CustomRole": "CustomRole"
   }
@@ -114,7 +114,7 @@ _utilities.register(
  {
   "pkg": "launchdarkly",
   "mod": "index/destination",
-  "fqn": "lbrlabs_pulumi_launchdarkly",
+  "fqn": "playlist_pulumi_launchdarkly",
   "classes": {
    "launchdarkly:index/destination:Destination": "Destination"
   }
@@ -122,7 +122,7 @@ _utilities.register(
  {
   "pkg": "launchdarkly",
   "mod": "index/environment",
-  "fqn": "lbrlabs_pulumi_launchdarkly",
+  "fqn": "playlist_pulumi_launchdarkly",
   "classes": {
    "launchdarkly:index/environment:Environment": "Environment"
   }
@@ -130,7 +130,7 @@ _utilities.register(
  {
   "pkg": "launchdarkly",
   "mod": "index/featureFlag",
-  "fqn": "lbrlabs_pulumi_launchdarkly",
+  "fqn": "playlist_pulumi_launchdarkly",
   "classes": {
    "launchdarkly:index/featureFlag:FeatureFlag": "FeatureFlag"
   }
@@ -138,7 +138,7 @@ _utilities.register(
  {
   "pkg": "launchdarkly",
   "mod": "index/featureFlagEnvironment",
-  "fqn": "lbrlabs_pulumi_launchdarkly",
+  "fqn": "playlist_pulumi_launchdarkly",
   "classes": {
    "launchdarkly:index/featureFlagEnvironment:FeatureFlagEnvironment": "FeatureFlagEnvironment"
   }
@@ -146,7 +146,7 @@ _utilities.register(
  {
   "pkg": "launchdarkly",
   "mod": "index/flagTemplates",
-  "fqn": "lbrlabs_pulumi_launchdarkly",
+  "fqn": "playlist_pulumi_launchdarkly",
   "classes": {
    "launchdarkly:index/flagTemplates:FlagTemplates": "FlagTemplates"
   }
@@ -154,7 +154,7 @@ _utilities.register(
  {
   "pkg": "launchdarkly",
   "mod": "index/flagTrigger",
-  "fqn": "lbrlabs_pulumi_launchdarkly",
+  "fqn": "playlist_pulumi_launchdarkly",
   "classes": {
    "launchdarkly:index/flagTrigger:FlagTrigger": "FlagTrigger"
   }
@@ -162,7 +162,7 @@ _utilities.register(
  {
   "pkg": "launchdarkly",
   "mod": "index/metric",
-  "fqn": "lbrlabs_pulumi_launchdarkly",
+  "fqn": "playlist_pulumi_launchdarkly",
   "classes": {
    "launchdarkly:index/metric:Metric": "Metric"
   }
@@ -170,7 +170,7 @@ _utilities.register(
  {
   "pkg": "launchdarkly",
   "mod": "index/modelConfig",
-  "fqn": "lbrlabs_pulumi_launchdarkly",
+  "fqn": "playlist_pulumi_launchdarkly",
   "classes": {
    "launchdarkly:index/modelConfig:ModelConfig": "ModelConfig"
   }
@@ -178,7 +178,7 @@ _utilities.register(
  {
   "pkg": "launchdarkly",
   "mod": "index/project",
-  "fqn": "lbrlabs_pulumi_launchdarkly",
+  "fqn": "playlist_pulumi_launchdarkly",
   "classes": {
    "launchdarkly:index/project:Project": "Project"
   }
@@ -186,7 +186,7 @@ _utilities.register(
  {
   "pkg": "launchdarkly",
   "mod": "index/relayProxyConfiguration",
-  "fqn": "lbrlabs_pulumi_launchdarkly",
+  "fqn": "playlist_pulumi_launchdarkly",
   "classes": {
    "launchdarkly:index/relayProxyConfiguration:RelayProxyConfiguration": "RelayProxyConfiguration"
   }
@@ -194,7 +194,7 @@ _utilities.register(
  {
   "pkg": "launchdarkly",
   "mod": "index/segment",
-  "fqn": "lbrlabs_pulumi_launchdarkly",
+  "fqn": "playlist_pulumi_launchdarkly",
   "classes": {
    "launchdarkly:index/segment:Segment": "Segment"
   }
@@ -202,7 +202,7 @@ _utilities.register(
  {
   "pkg": "launchdarkly",
   "mod": "index/team",
-  "fqn": "lbrlabs_pulumi_launchdarkly",
+  "fqn": "playlist_pulumi_launchdarkly",
   "classes": {
    "launchdarkly:index/team:Team": "Team"
   }
@@ -210,7 +210,7 @@ _utilities.register(
  {
   "pkg": "launchdarkly",
   "mod": "index/teamMember",
-  "fqn": "lbrlabs_pulumi_launchdarkly",
+  "fqn": "playlist_pulumi_launchdarkly",
   "classes": {
    "launchdarkly:index/teamMember:TeamMember": "TeamMember"
   }
@@ -218,7 +218,7 @@ _utilities.register(
  {
   "pkg": "launchdarkly",
   "mod": "index/teamRoleMapping",
-  "fqn": "lbrlabs_pulumi_launchdarkly",
+  "fqn": "playlist_pulumi_launchdarkly",
   "classes": {
    "launchdarkly:index/teamRoleMapping:TeamRoleMapping": "TeamRoleMapping"
   }
@@ -226,7 +226,7 @@ _utilities.register(
  {
   "pkg": "launchdarkly",
   "mod": "index/view",
-  "fqn": "lbrlabs_pulumi_launchdarkly",
+  "fqn": "playlist_pulumi_launchdarkly",
   "classes": {
    "launchdarkly:index/view:View": "View"
   }
@@ -234,7 +234,7 @@ _utilities.register(
  {
   "pkg": "launchdarkly",
   "mod": "index/viewFilterLinks",
-  "fqn": "lbrlabs_pulumi_launchdarkly",
+  "fqn": "playlist_pulumi_launchdarkly",
   "classes": {
    "launchdarkly:index/viewFilterLinks:ViewFilterLinks": "ViewFilterLinks"
   }
@@ -242,7 +242,7 @@ _utilities.register(
  {
   "pkg": "launchdarkly",
   "mod": "index/viewLinks",
-  "fqn": "lbrlabs_pulumi_launchdarkly",
+  "fqn": "playlist_pulumi_launchdarkly",
   "classes": {
    "launchdarkly:index/viewLinks:ViewLinks": "ViewLinks"
   }
@@ -250,7 +250,7 @@ _utilities.register(
  {
   "pkg": "launchdarkly",
   "mod": "index/webhook",
-  "fqn": "lbrlabs_pulumi_launchdarkly",
+  "fqn": "playlist_pulumi_launchdarkly",
   "classes": {
    "launchdarkly:index/webhook:Webhook": "Webhook"
   }
@@ -262,7 +262,7 @@ _utilities.register(
  {
   "pkg": "launchdarkly",
   "token": "pulumi:providers:launchdarkly",
-  "fqn": "lbrlabs_pulumi_launchdarkly",
+  "fqn": "playlist_pulumi_launchdarkly",
   "class": "Provider"
  }
 ]
