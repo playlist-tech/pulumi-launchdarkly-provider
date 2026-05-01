@@ -30,7 +30,7 @@ jobs:
       with:
         path: ci-scripts
         repository: playlist-tech/pulumi-scripts
-        ref: third_party
+        ref: master
     - name: Unshallow clone for tags
       run: git fetch --prune --unshallow --tags
     - name: Install Go
@@ -128,7 +128,7 @@ jobs:
       with:
         path: ci-scripts
         repository: playlist-tech/pulumi-scripts
-        ref: third_party
+        ref: master
     - name: Unshallow clone for tags
       run: git fetch --prune --unshallow --tags
     - name: Install Go
@@ -199,7 +199,7 @@ jobs:
       with:
         path: ci-scripts
         repository: playlist-tech/pulumi-scripts
-        ref: third_party
+        ref: master
     - name: Unshallow clone for tags
       run: git fetch --prune --unshallow --tags
     - name: Install Go

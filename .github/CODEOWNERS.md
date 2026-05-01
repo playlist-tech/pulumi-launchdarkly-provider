@@ -1,1 +1,1 @@
-* @playlist-tech/squad-dev-experience
+* @playlist-tech/developer-experience
