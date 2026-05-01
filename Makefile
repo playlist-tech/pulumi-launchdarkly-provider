@@ -1,12 +1,12 @@
 PACK             := launchdarkly
-ORG              := lbrlabs
+ORG              := playlist-tech
 PROJECT          := github.com/${ORG}/pulumi-${PACK}
-NODE_MODULE_NAME := @lbrlabs/${PACK}
+NODE_MODULE_NAME := @playlist-tech/${PACK}
 TF_NAME          := ${PACK}
 PROVIDER_PATH    := provider
 VERSION_PATH     := ${PROVIDER_PATH}/pkg/version.Version
 JAVA_GEN         := pulumi-java-gen
-JAVA_GEN_VERSION := v0.5.4
+JAVA_GEN_VERSION := v1.25.0
 PLUGIN_PATH      := ${HOME}/.pulumi/plugins/
 
 TFGEN           := pulumi-tfgen-${PACK}
@@ -49,11 +49,17 @@ build_python:: install_plugins tfgen # build the python sdk
 	$(WORKING_DIR)/bin/$(TFGEN) python --overlays provider/overlays/python --out sdk/python/
 	cd sdk/python/ && \
         cp ../../README.md . && \
-        python3 setup.py clean --all 2>/dev/null && \
+        python3 -m pip install --upgrade pip setuptools wheel && \
+        python3 setup.py clean --all || true && \
         rm -rf ./bin/ ../python.bin/ && cp -R . ../python.bin && mv ../python.bin ./bin && \
+        cp ../../LICENSE ./bin/ || true && \
         sed -i.bak -e 's/^VERSION = .*/VERSION = "$(PYPI_VERSION)"/g' -e 's/^PLUGIN_VERSION = .*/PLUGIN_VERSION = "$(VERSION)"/g' ./bin/setup.py && \
         rm ./bin/setup.py.bak && \
-        cd ./bin && python3 setup.py build sdist
+        cd ./bin && \
+        python3 -VV && \
+        python3 -m pip --version && \
+        echo "Building python sdist: VERSION=$(PYPI_VERSION) PLUGIN_VERSION=$(VERSION)" && \
+        python3 -u setup.py -v sdist
 
 build_go:: install_plugins tfgen # build the go sdk
 	$(WORKING_DIR)/bin/$(TFGEN) go --overlays provider/overlays/go --out sdk/go/
@@ -96,8 +102,8 @@ clean::
 
 install_plugins::
 	[ -x $(shell which pulumi) ] || curl -fsSL https://get.pulumi.com | sh
-	pulumi plugin install resource random 4.8.2
-	pulumi plugin install resource aws 5.11.0
+	pulumi plugin install resource random 4.19.2
+	pulumi plugin install resource aws 6.83.3
 
 install_dotnet_sdk::
 	mkdir -p $(WORKING_DIR)/nuget

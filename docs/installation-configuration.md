@@ -8,10 +8,10 @@ layout: installation
 
 The Pulumi Launch Darkly provider is available as a package in all Pulumi languages:
 
-* JavaScript/TypeScript: [`@lbrlabs/pulumi-darkly`](https://www.npmjs.com/package/@lbrlabs/pulumi-launchdarkly)
-* Python: [`lbrlabs_pulumi_launchdarkly`](https://pypi.org/project/lbrlabs-pulumi-launchdarkly/)
-* Go: [`github.com/lbrlabs/pulumi-launchdarkly/sdk/go/launchdarkly`](https://pkg.go.dev/github.com/lbrlabs/pulumi-launchdarkly/sdk)
-* .NET: [`Lbrlabs.PulumiPackage.LaunchDarkly`](https://www.nuget.org/packages/Lbrlabs.PulumiPackage.LaunchDarkly)
+* JavaScript/TypeScript: [`@playlist-tech/pulumi-launchdarkly`](https://www.npmjs.com/package/@playlist-tech/pulumi-launchdarkly)
+* Python: [`playlist_pulumi_launchdarkly`](https://pypi.org/project/playlist-pulumi-launchdarkly/)
+* Go: [`github.com/playlist-tech/pulumi-launchdarkly/sdk/go/launchdarkly`](https://pkg.go.dev/github.com/playlist-tech/pulumi-launchdarkly/sdk)
+* .NET: [`Playlist.Pulumi.LaunchDarkly`](https://www.nuget.org/packages/Playlist.Pulumi.LaunchDarkly)
 
 ### Provider Binary
 

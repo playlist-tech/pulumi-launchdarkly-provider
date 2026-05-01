@@ -13,7 +13,7 @@ The Launch Darkly provider must be configured with credentials to deploy and upd
 {{% choosable language typescript %}}
 
 ```typescript
-import * as launchdarkly from "@lbrlabs/pulumi-lauchdarkly";
+import * as launchdarkly from "@playlist-tech/pulumi-launchdarkly";
 
 const sa = new launchdarkly.AccessToken("example", {
     role: "Reader",
@@ -25,7 +25,7 @@ const sa = new launchdarkly.AccessToken("example", {
 {{% choosable language python %}}
 
 ```python
-import lbrlabs_pulumi_launchdarkly as launchdarkly
+import playlist_pulumi_launchdarkly as launchdarkly
 
 service_account = launchdarkly.ServiceAccount(
     "example",

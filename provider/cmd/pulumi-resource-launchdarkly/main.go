@@ -3,17 +3,16 @@
 package main
 
 import (
+	"context"
 	_ "embed"
 
-	launchdarkly "github.com/lbrlabs/pulumi-launchdarkly/provider"
-	"github.com/lbrlabs/pulumi-launchdarkly/provider/pkg/version"
-	"github.com/pulumi/pulumi-terraform-bridge/v3/pkg/tfbridge"
+	launchdarkly "github.com/playlist-tech/pulumi-launchdarkly/provider"
+	pfbridge "github.com/pulumi/pulumi-terraform-bridge/v3/pkg/pf/tfbridge"
 )
 
 //go:embed schema-embed.json
 var pulumiSchema []byte
 
 func main() {
-	// Modify the path to point to the new provider
-	tfbridge.Main("launchdarkly", version.Version, launchdarkly.Provider(), pulumiSchema)
+	pfbridge.MainWithMuxer(context.Background(), "launchdarkly", launchdarkly.Provider(), pulumiSchema)
 }

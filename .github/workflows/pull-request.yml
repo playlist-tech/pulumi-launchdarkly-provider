@@ -8,7 +8,7 @@ env:
   PULUMI_API: https://api.pulumi.com
   PULUMI_GO_DEP_ROOT: ${{ github.workspace }}/..
   PULUMI_LOCAL_NUGET: ${{ github.workspace }}/nuget
-  PULUMI_TEST_OWNER: "lbrlabs"
+  PULUMI_TEST_OWNER: "playlist-tech"
   PYPI_PASSWORD: ${{ secrets.PYPI_API_TOKEN }}
   PYPI_USERNAME: "__token__"
   TRAVIS_OS_NAME: linux
@@ -19,7 +19,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout Repo
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
     - name: Comment PR
       uses: thollander/actions-comment-pull-request@1.0.1
       with:

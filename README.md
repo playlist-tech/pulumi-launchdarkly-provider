@@ -13,13 +13,13 @@ This package is available in many languages in standard packaging formats.
 To use from JavaScript or TypeScript in Node.js, install using either `npm`:
 
 ```
-$ npm install @lbrlabs/pulumi-launchdarkly
+$ npm install @playlist-tech/pulumi-launchdarkly
 ```
 
 or `yarn`:
 
 ```
-$ yarn add @lbrlabs/pulumi-launchdarkly
+$ yarn add @playlist-tech/pulumi-launchdarkly
 ```
 
 ### Python
@@ -27,7 +27,7 @@ $ yarn add @lbrlabs/pulumi-launchdarkly
 To use from Python, install using `pip`:
 
 ```
-$ pip install lbrlabs-pulumi-launchdarkly
+$ pip install playlist-pulumi-launchdarkly
 ```
 
 ### Go
@@ -35,7 +35,7 @@ $ pip install lbrlabs-pulumi-launchdarkly
 To use from Go, use `go get` to grab the latest version of the library
 
 ```
-$ go get github.com/lbrlabs/pulumi-launchdarkly/sdk/go/...
+$ go get github.com/playlist-tech/pulumi-launchdarkly/sdk/go/...
 ```
 
 ### .NET
@@ -44,7 +44,7 @@ To use from Dotnet, use `dotnet add package` to install into your project. You m
 
 
 ```
-$ dotnet add package lbrlabs.PulumiPackage.Launchdarkly
+$ dotnet add package Playlist.Pulumi.LaunchDarkly
 ```
 
 ## Reference
