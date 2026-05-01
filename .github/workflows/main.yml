@@ -2,6 +2,7 @@ permissions:
   contents: write
 env:
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  NO_TFGEN_PYTHON_PACKAGE: true
   NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
   NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
   NUGET_PUBLISH_KEY: ${{ secrets.NUGET_PUBLISH_KEY }}
@@ -27,7 +28,7 @@ jobs:
       with:
         path: ci-scripts
         repository: playlist-tech/pulumi-scripts
-        ref: third_party
+        ref: master
     - name: Unshallow clone for tags
       run: git fetch --prune --unshallow --tags
     - name: Install Go
@@ -105,7 +106,7 @@ jobs:
       with:
         path: ci-scripts
         repository: playlist-tech/pulumi-scripts
-        ref: third_party
+        ref: master
     - name: Unshallow clone for tags
       run: git fetch --prune --unshallow --tags
     - name: Install Go
@@ -125,21 +126,6 @@ jobs:
         repo: mikhailshilkov/schema-tools
     - name: Build tfgen & provider binaries
       run: make provider
-    # - if: github.event_name == 'pull_request'
-    #   name: Check Schema is Valid
-    #   run: |-
-    #     echo 'SCHEMA_CHANGES<<EOF' >> $GITHUB_ENV
-    #     schema-tools compare ${{ env.PROVIDER }} master --local-path=provider/cmd/pulumi-resource-${{ env.PROVIDER }}/schema.json >> $GITHUB_ENV
-    #     echo 'EOF' >> $GITHUB_ENV
-    # - if: github.event_name == 'pull_request'
-    #   name: Comment on PR with Details of Schema Check
-    #   uses: thollander/actions-comment-pull-request@1.0.1
-    #   with:
-    #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-    #     message: |
-    #       ### Does the PR have any schema changes?
-
-    #       ${{ env.SCHEMA_CHANGES }}
     - name: Tar provider binaries
       run: tar -zcf ${{ github.workspace }}/bin/provider.tar.gz -C ${{ github.workspace
         }}/bin/ pulumi-resource-${{ env.PROVIDER }} pulumi-tfgen-${{ env.PROVIDER
@@ -210,7 +196,7 @@ jobs:
       with:
         path: ci-scripts
         repository: playlist-tech/pulumi-scripts
-        ref: third_party
+        ref: master
     - name: Unshallow clone for tags
       run: git fetch --prune --unshallow --tags
     - name: Install Go
@@ -285,7 +271,7 @@ jobs:
       with:
         path: ci-scripts
         repository: playlist-tech/pulumi-scripts
-        ref: third_party
+        ref: master
     - name: Unshallow clone for tags
       run: git fetch --prune --unshallow --tags
     - name: Install Go
@@ -357,6 +343,7 @@ jobs:
         - "3.12"
 name: main
 "on":
+  workflow_dispatch: {}
   push:
     branches:
     - main
