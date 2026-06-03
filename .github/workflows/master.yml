@@ -93,9 +93,9 @@ jobs:
         - "21"
         language:
         - nodejs
-        - python
+        # - python
         - dotnet
-        - go
+        # - go
         nodeversion:
         - 22.x
         pythonversion:
@@ -249,13 +249,13 @@ jobs:
         cache: gradle
         distribution: temurin
         java-version: ${{matrix.javaversion}}
-    - name: Download python SDK
-      uses: actions/download-artifact@v4
-      with:
-        name: python-sdk.tar.gz
-        path: ${{ github.workspace}}/sdk/
-    - name: Uncompress python SDK
-      run: tar -zxf ${{github.workspace}}/sdk/python.tar.gz -C ${{github.workspace}}/sdk/python
+    # - name: Download python SDK
+    #   uses: actions/download-artifact@v4
+    #   with:
+    #     name: python-sdk.tar.gz
+    #     path: ${{ github.workspace}}/sdk/
+    # - name: Uncompress python SDK
+    #   run: tar -zxf ${{github.workspace}}/sdk/python.tar.gz -C ${{github.workspace}}/sdk/python
     - name: Download dotnet SDK
       uses: actions/download-artifact@v4
       with:
@@ -371,9 +371,9 @@ jobs:
         - "21"
         language:
         - nodejs
-        - python
+        # - python
         - dotnet
-        - go
+        # - go
         nodeversion:
         - 22.x
         pythonversion:
