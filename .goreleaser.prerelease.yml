@@ -1,3 +1,4 @@
+version: 2
 archives:
 - id: archive
   name_template: '{{ .Binary }}-{{ .Tag }}-{{ .Os }}-{{ .Arch }}'
@@ -23,8 +24,8 @@ builds:
   - -X github.com/playlist-tech/pulumi-launchdarkly/provider/pkg/version.Version={{.Tag}}
   main: ./cmd/pulumi-resource-launchdarkly/
 changelog:
-  skip: true
+  disable: true
 release:
   disable: true
 snapshot:
-  name_template: '{{ .Tag }}-SNAPSHOT'
+  version_template: '{{ .Tag }}-SNAPSHOT'
